@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="gof">
+<div ng-controller="gameOfLifeController as gofCtrl">
+<!--    <input ng-model="calcCtrl.input"/></br>
+    <span>Input : {{calcCtrl.input}}</span></br>
+    <button ng-click="calcCtrl.compute()">Compute</button>
+    <button ng-click="calcCtrl.render()">Render</button>
+    <span ng-if="calcCtrl.outputCompute"><br/>Compute : {{calcCtrl.outputCompute}}</span>
+    <span ng-if="calcCtrl.outputRender"><br/>Render : {{calcCtrl.outputRender}}</span>-->
+<!--<input ng-model="gofCtrl."-->
+    <div>Number of lines and columns : <input ng-model="gofCtrl.board.nbRows"/></div>
+    <div>Size : <input ng-model="gofCtrl.inputGrid.size"/></div>
+    <div>Frequency (ms) : <input ng-model="gofCtrl.frequency"/></div>
+    <button ng-click="gofCtrl.render()">Render</button>
+    <canvas id="inputBoard" ng-mousedown="gofCtrl.onMouseDown($event)">
+    </canvas>
+
+    <canvas id="resultBoard">
+    </canvas>
+
+    <button ng-click="gofCtrl.startGame()">Start!</button>
+    <button ng-click="gofCtrl.stopGame()">Stop</button>
+
+
+</div>
+<script src="lib/angular.min.js"></script>
+<script src="modules/gof.module.js"></script>
+<script src="gameOfLife.js"></script>
+</body>
+</html>

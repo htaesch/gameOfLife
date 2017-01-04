@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="app">
+<div ng-controller="calculatriceController as calcCtrl">
+    <input ng-model="calcCtrl.input"/></br>
+    <span>Input : {{calcCtrl.input}}</span></br>
+    <button ng-click="calcCtrl.compute()">Compute</button>
+    <button ng-click="calcCtrl.render()">Render</button>
+    <span ng-if="calcCtrl.outputCompute"><br/>Compute : {{calcCtrl.outputCompute}}</span>
+    <span ng-if="calcCtrl.outputRender"><br/>Render : {{calcCtrl.outputRender}}</span>
+</div>
+<script src="lib/angular.min.js"></script>
+<script src="modules/app.module.js"></script>
+<script src="calculatrice.js"></script>
+</body>
+</html>
